@@ -84,10 +84,12 @@ for(int i=-0.3*max;i<0.3*max;i++)
         	{
 	if(ampli>0)ampli-=0.00006; //hm... e^-x egzaminu nie zdaje, od biedy to jest w pewnym zakresie dobre przybli¿enie - dlatego?
 									//shit! Jak tu zaaplikowaæ exponent?
+									//kurwa, spróbowaæ to potem zró¿niczkowaæ, bo chyba tylko tak da siê zaimplementowaæ w pêtli gradient ekpotencjalny
+
 
 									// ja pierdolê... SVN.
 	if(ampli2>0)ampli2-=0.00006;
-	if(ampli3>0)ampli3-=0.00006;
+	if(ampli3>0)ampli3-=0.00006;// chyba ok
 	for(int j=-1.2*max;j<1.2*max;j++)
 	{
 
@@ -114,6 +116,15 @@ for(int i=-0.3*max;i<0.3*max;i++)
             		//có¿, chyba interferuje :) Jakieœ tam kreski siê tworz¹, chyba nawet na oko tak, jak powinny siê tworzyæ linie interferencyjne.
 					// http://sciaga.onet.pl/_i/fizyka_sciaga/fizyka_1.jpg //o, tak to powinno wygl¹daæ. Huhu.
 					// por¹bane to trochê w rezultacie, ale jakoœ dzia³a. Dorobiæ punkt wyboru "uderzenia" i poprawiæ sposób wygasania fali.
+
+            	//jak zaimplementowaæ odbicie?
+            	float odleglosc; //szerokosc shitu
+            	if(r1<odleglosc)
+            	{
+            		//r1 okreœla wspó³rzêdn¹... Teraz tylko kwestia odwrócenia fazy. Pytanie - jak?
+
+            		//a mo¿e nie w ifie, tylko dodaæ odpowiedni¹ wartoœæ przy wartoœci funkcji w glVertex? W tym jest potencja³
+            	}
         	}
 }
 
